@@ -1,0 +1,166 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.header_left, .header_right{
+    height: 7.095343680709535vh;  
+    background-color: black;
+}
+
+.main_content{
+margin: 7.095343680709535vh !important;
+
+
+}
+
+.font-14{
+    font-size: 14px;
+}
+
+
+.accordion-item{
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    /* width: 50%; */
+
+}
+
+.card_margin{
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+
+.card{
+border: 0 !important;
+}
+.card>img{
+    border-radius: 0 !important;
+}
+
+.accordion-body{
+    border-left: none;
+    border-right: none;
+
+}
+
+.searchOnMenuWrapper{  
+
+display: inline-flex;
+position: relative;
+height: 35px;
+margin-right: 20px;
+width: 140px;
+} 
+
+ .headerSearchInput{
+
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid rgba(240,240,240,.6);
+    padding-right: 25px;
+    width: 145px;
+    z-index: 10;
+    font-family: roboto,sans-serif;
+    font-weight: 400;
+}
+
+.header_search_img{
+    height: 23px;
+}
+
+
+.header_right>ul{
+    margin-top: 15px;
+    list-style-type: none;
+}
+
+
+@media (max-width: 576px) { 
+    
+    .font-14{
+        font-size: 10px;
+    }
+    .headerSearchInput{
+        padding-right: 2px;
+        width: 125px;
+    }
+    .header_right>ul>li{
+        margin-left: 1vw;
+     } 
+
+     .main_content{
+        margin: 14vh !important;
+        
+        
+        }
+    }
+    
+
+
+@media (min-width: 576px) { 
+    
+.font-14{
+    font-size: 10px;
+}
+.headerSearchInput{
+    padding-right: 2px;
+    width: 125px;
+}
+.header_right>ul>li{
+    margin-left: 1vw;
+ } 
+
+ 
+ .main_content{
+    margin: 14vh !important;
+    
+    
+    }
+}
+
+@media (min-width: 768px) { 
+    .header_right>ul>li{
+        margin-left: 1vw; 
+     }
+
+ }
+
+@media (min-width: 992px) {
+    
+    .header_right>ul>li{
+        margin-left: 0vw;
+       
+     }
+ }
+
+ 
+@media (min-width: 1200px) { 
+    .header_right>ul>li{
+        margin-left: 2vw; 
+     }
+
+ }
+
+ 
+@media (min-width: 1400px) { 
+    .header_right>ul>li{
+        margin-left: 2vw; 
+     } 
+ }
+
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+[
+  {
+    "title": "Leopard Print Marilyn Monroe Graphic Tee",
+    "price": "950",
+    "size": ["xs" , "S" , "M"],
+    " Discounts": "0%",
+    "Categories": "mens",
+    "Color": "Brown",
+    "Product_Type": "mens_tshirt",
+    "img" : "https://forever21.imgix.net/img/app/product/5/564297-4914314.jpg?w=264&auto=format"
+  },
+
+  {
+    "title": "Colorblock Heathered Sweatshirt",
+    "price": "1399",
+    "size": ["XS"],
+    "Discounts": "50%",
+    "Categories": "mens",
+    "Color": "Silver",
+    "Product_Type": "mens_sweetshirt",
+    "img" : "https://forever21.imgix.net/img/app/product/5/515020-3879536.jpg?w=264&auto=format"
+  },
+
+  {
+    "title": "Glen Plaid Slim-Fit Trousers",
+    "price": "2299",
+    "size": [ "M" ],
+    " Discounts": "50%",
+    "Categories": "mens",
+    "Color": "Silver",
+    "Product_Type": "mens_trousers",
+    "img" : "https://forever21.imgix.net/img/app/product/5/513153-3864771.jpg?w=430&auto=format"
+   
+},
+
+  
+  {
+    "title": "Faux Leather Slides",
+    "price": "960",
+    "size": "[9.5, 8 , 8.5 , 9  ,10]",
+    " Discounts": "20%",
+    "Categories": "mens",
+    "Color": "White",
+    "Product_Type": "mens_Slides",
+    "img" : "https://forever21.imgix.net/img/app/product/5/596981-5541665.jpg?w=430&auto=format"
+  },
+
+
+  
+  {
+    "title": "Faux Leather Slides",
+    "price": "960",
+    "size": "[9.5, 8 , 8.5 , 9  ,10]",
+    " Discounts": "20%",
+    "Categories": "mens",
+    "Color": "Black",
+    "Product_Type": "mens_Slides",
+    "img" : "https://forever21.imgix.net/img/app/product/5/590883-5418204.jpg?w=430&auto=format"
+  },
+
+  
+  {
+    "title": "Duo-Stripe Tee",
+    "price": "809",
+    "size": ["L"],
+    " Discounts": "0%",
+    "Categories": "mens",
+    "Color": "White",
+    "Product_Type": "mens_tsirt",
+    "img" : "https://forever21.imgix.net/img/app/product/5/513837-3869753.jpg?w=430&auto=format"
+  },
+
+  
+  {
+    "title": "Men Low-Top Sneakers",
+    "price": "1120",
+    "size": "[10,11,12]",
+    " Discounts": "60%",
+    "Categories": "mens",
+    "Color": "Brown",
+    "Product_Type": "mens_sneakers",
+    "img" : "https://forever21.imgix.net/img/app/product/4/457303-3138359.jpg?w=430&auto=format"
+  },
+
+  
+  {
+    "title": "Men Textured Solid Sneakers",
+    "price": "1000",
+    "size": "[12]",
+    " Discounts": "60%",
+    "Categories": "mens",
+    "Color": "Green",
+    "Product_Type": "mens_sneakers",
+    "img" : "https://forever21.imgix.net/img/app/product/5/570007-5012008.jpg?w=430&auto=format"
+  },
+
+  {
+    "title": "Be Yourself Graphic Tee",
+    "price": "520",
+    "size": ["xs"],
+    " Discounts": "60%",
+    "Categories": "mens",
+    "Color": "Yellow",
+    "Product_Type": "mens_tshirt",
+    "img" : "https://forever21.imgix.net/img/app/product/4/454936-3108562.jpg?w=430&auto=format"
+  },
+
+  {
+    "title": "Crew Neck Solid Sweatshirt",
+    "price": "600",
+    "size": ["xs"],
+    " Discounts": "60%",
+    "Categories": "mens",
+    "Color": "Red",
+    "Product_Type": "mens_tshirt",
+    "img" : "https://forever21.imgix.net/img/app/product/5/568013-4985257.jpg?w=100&auto=format"
+  }
+
+
+
+]
