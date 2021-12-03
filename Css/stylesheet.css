@@ -7,6 +7,17 @@ body{
 
 
 
+#clear_all{
+    border: none;
+    background-color: transparent
+    
+}
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+
 .header_left, .header_right{
     height: 7.095343680709535vh;  
     background-color: black;
@@ -23,17 +34,15 @@ margin: 7.095343680709535vh !important;
 }
 
 
+.accordion-header{
+    font-size: 20px;
+}
+
 .accordion-item{
     border-left: none !important;
     border-right: none !important;
     border-radius: 0 !important;
-    /* width: 50%; */
 
-}
-
-.card_margin{
-    margin-top: -10px;
-    margin-left: -10px;
 }
 
 
@@ -98,7 +107,11 @@ width: 140px;
      } 
 
      .main_content{
-        margin: 14vh !important;
+        margin-top: 14vh !important;
+
+        margin-left: 1vw !important;
+        margin-right: 1vw !important;
+
         
         
         }
@@ -121,7 +134,7 @@ width: 140px;
 
  
  .main_content{
-    margin: 14vh !important;
+    margin: 7vh !important;
     
     
     }
@@ -140,6 +153,17 @@ width: 140px;
         margin-left: 0vw;
        
      }
+
+     
+     .main_content{
+        margin-top: 7vh !important;
+
+        margin-left: 1vw !important;
+        margin-right: 1vw !important;
+
+        
+        
+        }
  }
 
  
