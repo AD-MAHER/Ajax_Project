@@ -256,3 +256,43 @@ let obj = (product) => {
 
 // console.log(selectedValues);
 // console.log(product.Color);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+${product.Discounts>0 ? `<div class="discount_badge">
+       <div>${products.Discounts}% </div>
+       </div>`: " "}
+
+
+
+
+         
+  Products_Array.forEach(function (products) {
+  if(+products.Discounts > 0){
+    products.Discounts = `<div class="discount_badge">
+    <div>${products.Discounts}</div>
+    </div>`
+    console.log(products.Discounts);
+
+  }
+  else{
+    products.Discounts = " "
+  }
+  
+  })

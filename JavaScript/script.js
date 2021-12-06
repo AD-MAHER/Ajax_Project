@@ -10,9 +10,6 @@ $(document).ready(function () {
   });
 
 
-  // let commonFilter =Products_Array;
-
-
   let selectedValues = {
     DISCOUNTS: [],
     CATAGORIES: [],
@@ -30,12 +27,18 @@ $(document).ready(function () {
 
   
 
+$("#header_searchbar ").on("keyup",()=>{
+  
+  filteredAll ()
+});
+
+
   
  
   
   $("#clear_all").on("click",()=>{
-    // commonFilter =Products_Array ;
     $("input").prop("checked" , false)
+    $("#header_searchbar ").prop("value", "" );
     $("#product_card").empty();
     Products_Array.map(obj);
     
@@ -111,10 +114,12 @@ $(document).ready(function () {
 
  
 function  filteredAll (){
-  let commonFilter =Products_Array;
+
+  let commonFilter = [];
+  commonFilter = Products_Array;
   console.log("value",selectedValues);
   console.log("called");
-  // commonFilter =Products_Array;
+
   filteredColor = [];
   
   Products_Array.forEach(function (product) {
@@ -124,7 +129,6 @@ function  filteredAll (){
    
   });
   if(selectedValues.COLOR.length !== 0){
-    // console.log("------------------->",selectedValues.COLOR);
     commonFilter = filteredColor;
   }
 
@@ -134,15 +138,9 @@ function  filteredAll (){
   commonFilter.forEach(function (product) {
     if (selectedValues.DISCOUNTS.includes(product.Discounts)) {
       filteredDiscounts.push(product);
-      console.log("if ---------------" ,   commonFilter);
+      
     }
-    // else if(selectedValues.DISCOUNTS.length == 0){
-
-    //   console.log("else ---------------" ,   commonFilter);
-    //   // console.log("------------------->",selectedValues.COLOR);
-    //   filteredDiscounts = commonFilter;
-    // }
-
+  
   });
   if(selectedValues.DISCOUNTS.length !== 0){
     commonFilter = filteredDiscounts;
@@ -187,16 +185,37 @@ commonFilter.forEach(function (product) {
   
   });
 
+  
+
   if(selectedValues.SIZES.length !== 0){
     commonFilter = filteredSizes;
-  }  
+  } 
+  
+  
+  let titleSearch = []
+  commonFilter.forEach(function (product) {
+    if (product.title.toLowerCase().includes($("#header_searchbar ").val()) ||
+    product.Product_Type.toLowerCase().includes($("#header_searchbar ").val()) ||
+    product.Color.toLowerCase().includes($("#header_searchbar ").val()) ||
+    product.Categories.toLowerCase().includes($("#header_searchbar ").val())) { 
+      titleSearch.push(product);
+    }
+
+  
+
+    if($("#header_searchbar ").val().length !== 0){
+      commonFilter = titleSearch;
+    }
+
+    
+  });
   $("#product_card").empty();
     commonFilter.map(obj);
+   
     
+   
+
 }
-
-
-
 
 
 
@@ -205,6 +224,9 @@ let obj = (product) => {
     $("#product_card").append(
       `<div class=" col-12 col-sm-12 col-md-4 col-ld-4 col-xl-3 justify-content-around">
         <div class="card " >
+        ${product.Discounts>0 ? `<div class="discount_badge">
+       <div>${product.Discounts}% </div>
+       </div>`: ""}
         <img src="${product.img}"
          class="card-img-top" alt="..." style="height: 35vh; width:100% ">
     <div class="card-body  ">

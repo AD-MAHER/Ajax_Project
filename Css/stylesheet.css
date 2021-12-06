@@ -13,6 +13,23 @@ body{
     
 }
 
+.discount_badge{
+    background-color: red;
+    height: 45px;
+    width: 45px;
+    color: white;
+    border-radius: 25px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    top: -10px;
+    left: -10px;
+ 
+}
 .container-fluid{
     margin: 0;
     padding: 0;
