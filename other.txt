@@ -1,3 +1,4 @@
+
 // write program for odd even number
 
 $(document).ready(function () {
@@ -10,7 +11,7 @@ $(document).ready(function () {
   });
 
 
-  // let commonFilter =Products_Array;
+  let commonFilter =Products_Array;
 
 
   let selectedValues = {
@@ -34,11 +35,9 @@ $(document).ready(function () {
  
   
   $("#clear_all").on("click",()=>{
-    // commonFilter =Products_Array ;
+    commonFilter =Products_Array ;
     $("input").prop("checked" , false)
-    $("#product_card").empty();
-    Products_Array.map(obj);
-    
+    commonFilter.map(obj);
   } )
 
 
@@ -55,6 +54,21 @@ $(document).ready(function () {
         selectedValues.COLOR.push($(this).val());
       });
 
+   
+  
+    filteredColor = [];
+
+    Products_Array.forEach(function (product) {
+      if (selectedValues.COLOR.includes(product.Color)) {
+        filteredColor.push(product);
+      }
+      else if(selectedValues.COLOR.length == 0){
+        // console.log("------------------->",selectedValues.COLOR);
+        filteredColor = Products_Array;
+      }
+    });
+    commonFilter = filteredColor;
+
     filteredAll ()
   });
 
@@ -67,9 +81,31 @@ $(document).ready(function () {
     // if($("#collapseDiscounts input").is(":checked" ) ){    }
       $("#collapseDiscounts input:checked").each(function () {
         selectedValues.DISCOUNTS.push($(this).val());  
-      
+
+
+    
+    
+  
+      filteredDiscounts = [];
+      commonFilter.forEach(function (product) {
+        if (selectedValues.DISCOUNTS.includes(product.Discounts)) {
+          filteredDiscounts.push(product);
+          console.log("if ---------------" ,   commonFilter);
+        }
+        else if(selectedValues.DISCOUNTS.length == 0){
+
+          console.log("else ---------------" ,   commonFilter);
+          // console.log("------------------->",selectedValues.COLOR);
+          filteredDiscounts = commonFilter;
+
+
+        }
+
+      });
+      commonFilter = filteredDiscounts
+      console.log(filteredDiscounts);
+      filteredAll ()
     });
-    filteredAll ()
   });
 
 
@@ -77,9 +113,17 @@ $(document).ready(function () {
     selectedValues.PRODUCT_TYPE = [];
     $("#collapseProductType input:checked").each(function () {
       selectedValues.PRODUCT_TYPE.push($(this).val());
-      
+
+      filteredProductType = [];
+      commonFilter.forEach(function (product) {
+        if (selectedValues.PRODUCT_TYPE.includes(product.Product_Type)) {
+          filteredProductType.push(product);
+        }
+      });
+      commonFilter = filteredProductType
+      console.log(filteredProductType);
+      filteredAll ()
     });
-    filteredAll ()
   });
 
 
@@ -88,8 +132,16 @@ $(document).ready(function () {
     $("#collapseCatagories input:checked").each(function () {
       selectedValues.CATAGORIES.push($(this).val());
 
+      filteredCatagories = [];
+      commonFilter.forEach(function (product) {
+        if (selectedValues.CATAGORIES.includes(product.Categories)) {
+          filteredCatagories.push(product);
+        }
+      });
+      commonFilter = filteredCatagories
+      console.log(filteredCatagories);
+      filteredAll ()
     });
-    filteredAll ()
   });
 
 
@@ -100,81 +152,12 @@ $(document).ready(function () {
     $("#collapseSize input:checked").each(function () {
       selectedValues.SIZES.push($(this).val());
       console.log(selectedValues.SIZES);
-      
+      filteredSizes = [];
 
 // *********************
-    });
-    filteredAll ()
-  });
 
 
 
- 
-function  filteredAll (){
-  let commonFilter =Products_Array;
-  console.log("value",selectedValues);
-  console.log("called");
-  // commonFilter =Products_Array;
-  filteredColor = [];
-  
-  Products_Array.forEach(function (product) {
-    if (selectedValues.COLOR.includes(product.Color)) {
-      filteredColor.push(product);
-    }
-   
-  });
-  if(selectedValues.COLOR.length !== 0){
-    // console.log("------------------->",selectedValues.COLOR);
-    commonFilter = filteredColor;
-  }
-
-
-
-  filteredDiscounts = [];
-  commonFilter.forEach(function (product) {
-    if (selectedValues.DISCOUNTS.includes(product.Discounts)) {
-      filteredDiscounts.push(product);
-      console.log("if ---------------" ,   commonFilter);
-    }
-    // else if(selectedValues.DISCOUNTS.length == 0){
-
-    //   console.log("else ---------------" ,   commonFilter);
-    //   // console.log("------------------->",selectedValues.COLOR);
-    //   filteredDiscounts = commonFilter;
-    // }
-
-  });
-  if(selectedValues.DISCOUNTS.length !== 0){
-    commonFilter = filteredDiscounts;
-  }
-
-
-  filteredProductType = [];
-  commonFilter.forEach(function (product) {
-    if (selectedValues.PRODUCT_TYPE.includes(product.Product_Type)) {
-      filteredProductType.push(product);
-    }
-  });
-  if(selectedValues.PRODUCT_TYPE.length !== 0){
-    commonFilter = filteredProductType;
-  }
-
-
-
-
-  filteredCatagories = [];
-  commonFilter.forEach(function (product) {
-    if (selectedValues.CATAGORIES.includes(product.Categories)) {
-      filteredCatagories.push(product);
-    }
-  });
-  if(selectedValues.CATAGORIES.length !== 0){
-    commonFilter = filteredCatagories;
-  }  
-
-
-
-  filteredSizes = [];
 commonFilter.forEach(function (product) {
     product.size.forEach(function (sz){
         if (selectedValues.SIZES.includes(sz) ) {
@@ -187,12 +170,33 @@ commonFilter.forEach(function (product) {
   
   });
 
-  if(selectedValues.SIZES.length !== 0){
-    commonFilter = filteredSizes;
-  }  
-  $("#product_card").empty();
+
+
+  commonFilter = filteredSizes
+      console.log(filteredSizes);
+      filteredAll ()
+    });
+   
+  });
+
+
+
+ 
+  let xyz =[]
+function  filteredAll (){
+//     commonFilter=[]
+
+
+//  commonFilter = filteredColor.concat(filteredDiscounts,filteredCatagories,filteredSizes,filteredProductType)
+
+//   xyz = new Set(commonFilter)
+// console.log(xyz);
+
+//     document.getElementById("product_card").innerHTML = " "
+    // Array.from(xyz).map(obj);
+
+
     commonFilter.map(obj);
-    
 }
 
 
@@ -227,7 +231,12 @@ let obj = (product) => {
     );
   }
 
-  Products_Array.map(obj);
+
+  commonFilter.map(obj);
+
+
+
+
 });
 
 // console.log($(this).val());
